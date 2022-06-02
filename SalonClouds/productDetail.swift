@@ -9,15 +9,24 @@ import UIKit
 
 class productDetail: UIViewController {
     @IBOutlet var tableView : UITableView!
+    @IBOutlet weak var backButton : UIImageView!
 
     @IBOutlet weak var heartImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+     
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        backButton.isUserInteractionEnabled = true
+        backButton.addGestureRecognizer(tapGestureRecognizer)
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func imageTapped(tapGestureRecognizer:UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        self.navigationController?.popViewController(animated: true)
 
+    }
    
     @IBAction func buyButton(_ sender: Any) {
         let storyboard=UIStoryboard(name: "Main", bundle:nil)

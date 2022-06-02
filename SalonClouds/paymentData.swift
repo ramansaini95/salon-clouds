@@ -14,6 +14,7 @@ class paymentData: UIViewController {
     @IBOutlet weak var cvv: UITextField!
     @IBOutlet weak var expYear: UITextField!
     @IBOutlet weak var expMonth: UITextField!
+    @IBOutlet weak var backButton : UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         cardName.useUnderline()
@@ -21,6 +22,10 @@ class paymentData: UIViewController {
         cvv.useUnderline()
         expYear.useUnderline()
         expMonth.useUnderline()
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        backButton.isUserInteractionEnabled = true
+        backButton.addGestureRecognizer(tapGestureRecognizer)
     }
     
 
@@ -30,8 +35,10 @@ class paymentData: UIViewController {
         navigationController?.isNavigationBarHidden=true
         self.navigationController?.pushViewController(vc!, animated: true)
     }
-    @IBAction func backButton(_sender:UIImageView)
+    @objc func imageTapped(tapGestureRecognizer:UITapGestureRecognizer)
     {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+
         self.navigationController?.popViewController(animated: true)
 
     }

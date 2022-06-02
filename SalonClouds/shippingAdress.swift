@@ -17,6 +17,7 @@ class shippingAdress: UIViewController {
     @IBOutlet weak var state: UITextField!
     @IBOutlet weak var adress: UITextField!
     @IBOutlet weak var phoneNo: UITextField!
+    @IBOutlet weak var backButton : UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         firstName.useUnderline()
@@ -28,10 +29,15 @@ class shippingAdress: UIViewController {
         adress.useUnderline()
         phoneNo.useUnderline()
         adress.useUnderline()
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        backButton.isUserInteractionEnabled = true
+        backButton.addGestureRecognizer(tapGestureRecognizer)
 
         // Do any additional setup after loading the view.
     }
    
+    
     @IBAction func addAddress(_sender:UIButton)
     {
         let storyboard=UIStoryboard(name: "Main", bundle:nil)
@@ -39,8 +45,10 @@ class shippingAdress: UIViewController {
         navigationController?.isNavigationBarHidden=true
         self.navigationController?.pushViewController(vc!, animated: true)
     }
-    @IBAction func backButton(_sender:UIImageView)
+  @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
+    let tappedImage = tapGestureRecognizer.view as! UIImageView
+
         self.navigationController?.popViewController(animated: true)
 
     }
