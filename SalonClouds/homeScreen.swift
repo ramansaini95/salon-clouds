@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import SideMenu
 
 class homeScreen: UIViewController,YourCellDelegate {
     
     
     @IBOutlet var tableData:UITableView!
+    @IBOutlet var sideMenu :UIImageView!
     @IBOutlet weak var searchField: UITextField!{
         didSet{
             searchField.tintColor = UIColor.lightGray
@@ -19,6 +21,11 @@ class homeScreen: UIViewController,YourCellDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        let menu = storyboard!.instantiateViewController(withIdentifier: "shopAll") as! shopAll
+        SideMenuManager.default.leftMenuNavigationController = menu
+
+        present(menu, animated: true, completion: nil)
+
 //        tableData.dataSource = self
 //        tableData.delegate = self
 

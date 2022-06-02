@@ -160,7 +160,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <color key="backgroundColor" red="0.0" green="0.75294117650000003" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="SFi-cz-iGv" firstAttribute="centerY" secondItem="m2E-xN-19g" secondAttribute="centerY" id="Yos-DL-qqW"/>
                                             <constraint firstItem="SFi-cz-iGv" firstAttribute="centerX" secondItem="m2E-xN-19g" secondAttribute="centerX" id="cPz-VL-abS"/>
@@ -581,7 +581,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <color key="backgroundColor" red="0.0" green="0.75294117650000003" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="Sev-nb-dPf" firstAttribute="centerY" secondItem="Uld-WF-aTf" secondAttribute="centerY" id="2kt-S5-0SD"/>
                                                     <constraint firstAttribute="height" constant="30" id="68u-9b-f6I"/>
@@ -1067,7 +1067,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <color key="backgroundColor" red="0.0" green="0.75294117650000003" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="ekD-zn-zsY" firstAttribute="centerX" secondItem="mlY-JR-e83" secondAttribute="centerX" id="HUJ-5b-iJZ"/>
                                                     <constraint firstAttribute="height" constant="30" id="TEb-AN-fiU"/>
@@ -2017,7 +2017,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <color key="backgroundColor" red="0.0" green="0.75294117650000003" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="XJI-bU-if1" firstAttribute="centerX" secondItem="0aH-vF-yLk" secondAttribute="centerX" id="Pyn-0k-eeN"/>
                                                     <constraint firstAttribute="width" constant="30" id="VCw-66-GIb"/>
