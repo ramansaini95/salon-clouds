@@ -21,16 +21,28 @@ class homeScreen: UIViewController,YourCellDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        let menu = storyboard!.instantiateViewController(withIdentifier: "shopAll") as! shopAll
-        SideMenuManager.default.leftMenuNavigationController = menu
+        setupSideMenu()
+        updateMenus()
 
-        present(menu, animated: true, completion: nil)
+       // let menu = SideMenuNavigationController(rootViewController: shopAll())
+//        let menu = storyboard!.instantiateViewController(withIdentifier: "shopAll") as! shopAll
+//        //menu.leftSide=true
+//       // SideMenuManager.default.leftMenuNavigationController = menu
+//       // SideMenuManager.default.addPanGestureToPresent(toView: view)
+//     present(menu,animated: true,completion: nil)
+        //let menu = storyboard!.instantiateViewController(withIdentifier: "shopAll") as! shopAll
+      
+
+        //present(menu, animated: true, completion: nil)
 
 //        tableData.dataSource = self
 //        tableData.delegate = self
 
-        // Do any additional setup after loading the view.
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+//        sideMenu.isUserInteractionEnabled = true
+//        sideMenu.addGestureRecognizer(tapGestureRecognizer)
     }
+     
     func call(_sender:Any) {
         print("call")
         let storyboard=UIStoryboard(name: "Main", bundle:nil)
@@ -70,4 +82,75 @@ extension homeScreen : UITableViewDelegate,UITableViewDataSource{
    
    
     
+}
+extension homeScreen {
+    
+    private func setupSideMenu() {
+        // Define the menus
+        SideMenuManager.default.leftMenuNavigationController = storyboard?.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
+        // Enable gestures. The left and/or right menus must be set up above for these to work.
+        // Note that these continue to work on the Navigation Controller independent of the View Controller it displays!
+        //SideMenuManager.default.addPanGestureToPresent(toView: navigationController?.navigationBar ?? <#default value#>)
+        SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: view)
+    }
+    
+    private func updateMenus() {
+        let settings = makeSettings()
+        SideMenuManager.default.leftMenuNavigationController?.settings = settings
+        SideMenuManager.default.rightMenuNavigationController?.settings = settings
+    }
+
+    private func selectedPresentationStyle() -> SideMenuPresentationStyle {
+        let modes: [SideMenuPresentationStyle] = [.menuSlideIn, .viewSlideOut, .viewSlideOutMenuIn, .menuDissolveIn]
+        return modes[1]
+    }
+
+    private func makeSettings() -> SideMenuSettings {
+        let presentationStyle = selectedPresentationStyle()
+        //presentationStyle.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "menu (1)"))
+        presentationStyle.menuStartAlpha = 1
+        presentationStyle.menuScaleFactor = 1
+        presentationStyle.onTopShadowOpacity = 0
+        presentationStyle.presentingEndAlpha = 3
+        presentationStyle.presentingScaleFactor = 1
+
+        var settings = SideMenuSettings()
+        settings.presentationStyle = presentationStyle
+        settings.menuWidth = 239
+        let styles:[UIBlurEffect.Style?] = [nil, .dark, .light, .extraLight]
+        settings.blurEffectStyle = styles[1]
+        settings.statusBarEndAlpha = 1
+
+        return settings
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let sideMenuNavigationController = segue.destination as? SideMenuNavigationController else { return }
+        sideMenuNavigationController.settings = makeSettings()
+    }
+//    @IBAction func sideMenu(_sender:Any){
+//        let storyboard=UIStoryboard(name: "Main", bundle:nil)
+//        let sideMenuNavigationController = storyboard.instantiateViewController(identifier: "LeftMenuNavigationController") as? SideMenuNavigationController
+//
+//        sideMenuNavigationController?.settings = makeSettings()
+//
+//    }
+}
+extension homeScreen: SideMenuNavigationControllerDelegate {
+    
+    func sideMenuWillAppear(menu: SideMenuNavigationController, animated: Bool) {
+        print("SideMenu Appearing! (animated: \(animated))")
+    }
+    
+    func sideMenuDidAppear(menu: SideMenuNavigationController, animated: Bool) {
+        print("SideMenu Appeared! (animated: \(animated))")
+    }
+    
+    func sideMenuWillDisappear(menu: SideMenuNavigationController, animated: Bool) {
+        print("SideMenu Disappearing! (animated: \(animated))")
+    }
+    
+    func sideMenuDidDisappear(menu: SideMenuNavigationController, animated: Bool) {
+        print("SideMenu Disappeared! (animated: \(animated))")
+    }
 }

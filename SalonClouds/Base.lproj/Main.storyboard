@@ -2675,7 +2675,7 @@ It is a long established fact that a reader will be distracted by the readable c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ouc-m0-Z5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2442.0289855072465" y="26.785714285714285"/>
+            <point key="canvasLocation" x="3352.1739130434785" y="26.785714285714285"/>
         </scene>
         <!--Order Details-->
         <scene sceneID="6qB-6L-Jim">
@@ -3026,7 +3026,7 @@ It is a long established fact that a reader will be distracted by the readable c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXK-gE-JqL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3217.3913043478265" y="34.821428571428569"/>
+            <point key="canvasLocation" x="4127.536231884058" y="34.821428571428569"/>
         </scene>
         <!--Home Screen-->
         <scene sceneID="gLd-qk-5jV">
@@ -3039,17 +3039,21 @@ It is a long established fact that a reader will be distracted by the readable c
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Se-Hj-suy">
                                 <rect key="frame" x="0.0" y="44" width="414" height="150"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rXx-Ui-YDp">
-                                        <rect key="frame" x="10" y="0.0" width="394" height="72"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rXx-Ui-YDp">
+                                        <rect key="frame" x="10" y="0.0" width="394" height="90"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu (1)" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOp-xV-0eF">
-                                                <rect key="frame" x="10" y="32.5" width="30" height="25"/>
-                                                <color key="tintColor" red="0.0" green="0.75294117650000003" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n58-dR-ZmK">
+                                                <rect key="frame" x="20" y="35" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="5L7-f8-geo"/>
-                                                    <constraint firstAttribute="height" constant="25" id="vzC-sP-fuc"/>
+                                                    <constraint firstAttribute="width" constant="20" id="8Av-iP-3HA"/>
+                                                    <constraint firstAttribute="height" constant="20" id="OiP-8x-frB"/>
                                                 </constraints>
-                                            </imageView>
+                                                <inset key="imageEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                                                <state key="normal" image="menu (1)"/>
+                                                <connections>
+                                                    <segue destination="1Jg-ov-4U7" kind="presentation" id="cz3-wW-Cla"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Shop All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3c-4V-ATQ">
                                                 <rect key="frame" x="64" y="24" width="253" height="19"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -3057,7 +3061,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopping-basket" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-xw-hf1">
-                                                <rect key="frame" x="359" y="32.5" width="30" height="25"/>
+                                                <rect key="frame" x="359" y="13" width="30" height="64"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.0" green="0.75294117650000003" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -3067,14 +3071,12 @@ It is a long established fact that a reader will be distracted by the readable c
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="s3c-4V-ATQ" firstAttribute="leading" secondItem="nOp-xV-0eF" secondAttribute="trailing" constant="24" id="9IF-sv-SfM"/>
-                                            <constraint firstItem="ef5-xw-hf1" firstAttribute="bottom" secondItem="nOp-xV-0eF" secondAttribute="bottom" id="AC6-Jd-7AF"/>
+                                            <constraint firstItem="n58-dR-ZmK" firstAttribute="centerY" secondItem="rXx-Ui-YDp" secondAttribute="centerY" id="7gq-Sw-7gG"/>
                                             <constraint firstItem="ef5-xw-hf1" firstAttribute="leading" secondItem="s3c-4V-ATQ" secondAttribute="trailing" constant="42" id="Cvv-LN-akF"/>
                                             <constraint firstAttribute="bottom" secondItem="s3c-4V-ATQ" secondAttribute="bottom" constant="15" id="HQi-I5-9Rp"/>
                                             <constraint firstItem="s3c-4V-ATQ" firstAttribute="top" secondItem="rXx-Ui-YDp" secondAttribute="top" constant="15" id="Lo5-F9-oaa"/>
-                                            <constraint firstItem="nOp-xV-0eF" firstAttribute="leading" secondItem="rXx-Ui-YDp" secondAttribute="leading" constant="10" id="MgR-Aq-adi"/>
+                                            <constraint firstItem="n58-dR-ZmK" firstAttribute="leading" secondItem="rXx-Ui-YDp" secondAttribute="leading" constant="20" id="Mtl-Wt-l0h"/>
                                             <constraint firstAttribute="trailing" secondItem="ef5-xw-hf1" secondAttribute="trailing" constant="5" id="NnZ-vw-jjj"/>
-                                            <constraint firstItem="ef5-xw-hf1" firstAttribute="top" secondItem="nOp-xV-0eF" secondAttribute="top" id="dqd-1H-xpk"/>
                                             <constraint firstItem="ef5-xw-hf1" firstAttribute="centerY" secondItem="s3c-4V-ATQ" secondAttribute="centerY" id="tBs-lF-yop"/>
                                         </constraints>
                                     </view>
@@ -3280,13 +3282,6 @@ It is a long established fact that a reader will be distracted by the readable c
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o78-JF-a8a">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu (1)" translatesAutoresizingMaskIntoConstraints="NO" id="2X1-Kw-pVm">
-                                        <rect key="frame" x="10" y="12" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="8yw-yX-s4A"/>
-                                            <constraint firstAttribute="height" constant="20" id="hZy-NT-Eke"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShopAll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ck3-Jx-QM4">
                                         <rect key="frame" x="35" y="9" width="321" height="26.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -3300,17 +3295,29 @@ It is a long established fact that a reader will be distracted by the readable c
                                             <constraint firstAttribute="width" constant="30" id="Pj4-7R-F0W"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePq-ic-cqc">
+                                        <rect key="frame" x="10" y="12" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="gpa-hs-MIn"/>
+                                            <constraint firstAttribute="width" constant="20" id="txu-dX-U0h"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                                        <state key="normal" image="menu (1)"/>
+                                        <connections>
+                                            <action selector="sideMenuWith_sender:" destination="qXv-sd-bpm" eventType="touchUpInside" id="AnN-ks-TdZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="HFl-vf-w6g" secondAttribute="trailing" constant="18" id="37I-aJ-IUX"/>
                                     <constraint firstAttribute="height" constant="44" id="7Vy-iW-lkF"/>
-                                    <constraint firstItem="Ck3-Jx-QM4" firstAttribute="centerY" secondItem="2X1-Kw-pVm" secondAttribute="centerY" id="8TR-iy-bVz"/>
+                                    <constraint firstItem="ePq-ic-cqc" firstAttribute="centerY" secondItem="o78-JF-a8a" secondAttribute="centerY" id="8dL-pe-ITb"/>
                                     <constraint firstItem="HFl-vf-w6g" firstAttribute="centerY" secondItem="o78-JF-a8a" secondAttribute="centerY" id="9gk-D7-24W"/>
+                                    <constraint firstItem="ePq-ic-cqc" firstAttribute="leading" secondItem="o78-JF-a8a" secondAttribute="leading" constant="10" id="Arj-tJ-MiK"/>
                                     <constraint firstItem="HFl-vf-w6g" firstAttribute="leading" secondItem="Ck3-Jx-QM4" secondAttribute="trailing" constant="10" id="FIl-fH-Lq6"/>
-                                    <constraint firstItem="2X1-Kw-pVm" firstAttribute="leading" secondItem="o78-JF-a8a" secondAttribute="leading" constant="10" id="MWX-aZ-jE1"/>
+                                    <constraint firstItem="Ck3-Jx-QM4" firstAttribute="leading" secondItem="ePq-ic-cqc" secondAttribute="trailing" constant="5" id="j0P-eZ-FG7"/>
                                     <constraint firstItem="Ck3-Jx-QM4" firstAttribute="centerY" secondItem="HFl-vf-w6g" secondAttribute="centerY" id="re8-Ei-qGf"/>
-                                    <constraint firstItem="Ck3-Jx-QM4" firstAttribute="leading" secondItem="2X1-Kw-pVm" secondAttribute="trailing" constant="5" id="sRN-D2-bMb"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WL6-Yb-tRq">
@@ -3400,13 +3407,14 @@ It is a long established fact that a reader will be distracted by the readable c
                             <constraint firstItem="WL6-Yb-tRq" firstAttribute="leading" secondItem="q3A-e5-qZj" secondAttribute="leading" id="uuq-Z7-UL8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Uw3-nE-0mE"/>
                     <connections>
                         <outlet property="shopAllTable" destination="WL6-Yb-tRq" id="pCR-Wx-ctd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yN0-Sf-Ag9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1566.6666666666667" y="35.491071428571423"/>
+            <point key="canvasLocation" x="2476.811594202899" y="35.491071428571423"/>
         </scene>
         <!--Login Screen-->
         <scene sceneID="hhV-yC-eYy">
@@ -3527,6 +3535,137 @@ It is a long established fact that a reader will be distracted by the readable c
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OVq-NG-foS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1736.2318840579712" y="26.785714285714285"/>
+        </scene>
+        <!--Side View Controller-->
+        <scene sceneID="LKA-0u-32O">
+            <objects>
+                <viewController storyboardIdentifier="SideViewController" id="tX8-ze-d0J" customClass="SideViewController" customModule="SalonClouds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bZF-kj-y9H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ge0-a2-O5L">
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="shopAllCell" rowHeight="88" id="hNE-vl-jlL" customClass="shopAllCell" customModule="SalonClouds" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hNE-vl-jlL" id="iRs-9J-CGY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2YN-DX-Wff">
+                                                    <rect key="frame" x="10" y="0.0" width="394" height="88"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giu-qm-DiB">
+                                                            <rect key="frame" x="10" y="60" width="374" height="2"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.75294117650000003" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="2" id="dSg-CD-d38"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="286" translatesAutoresizingMaskIntoConstraints="NO" id="Rp7-mh-wWe">
+                                                            <rect key="frame" x="12" y="30" width="370" height="15"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dataaaaaaaaaaaaa" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfP-BE-orN">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="69" height="15"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="400" id="h7j-Z0-edt"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="next" translatesAutoresizingMaskIntoConstraints="NO" id="mcN-Wi-1jk">
+                                                                    <rect key="frame" x="355" y="0.0" width="15" height="15"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="15" id="G74-GC-x1m"/>
+                                                                        <constraint firstAttribute="height" constant="15" id="RH4-fl-6yx"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="hfP-BE-orN" firstAttribute="leading" secondItem="Rp7-mh-wWe" secondAttribute="leading" id="Huk-lM-KRd"/>
+                                                                <constraint firstAttribute="bottom" secondItem="hfP-BE-orN" secondAttribute="bottom" id="LZO-yt-5pm"/>
+                                                                <constraint firstItem="hfP-BE-orN" firstAttribute="top" secondItem="Rp7-mh-wWe" secondAttribute="top" id="aNt-0t-hpw"/>
+                                                                <constraint firstAttribute="bottom" secondItem="mcN-Wi-1jk" secondAttribute="bottom" id="nmL-eJ-KFK"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="giu-qm-DiB" firstAttribute="top" secondItem="Rp7-mh-wWe" secondAttribute="bottom" constant="15" id="NQn-Q0-eXr"/>
+                                                        <constraint firstItem="giu-qm-DiB" firstAttribute="leading" secondItem="2YN-DX-Wff" secondAttribute="leading" constant="10" id="ewr-MF-MSK"/>
+                                                        <constraint firstItem="Rp7-mh-wWe" firstAttribute="top" secondItem="2YN-DX-Wff" secondAttribute="top" constant="30" id="fLU-Hk-fxU"/>
+                                                        <constraint firstAttribute="height" constant="65" id="hCs-XA-R93"/>
+                                                        <constraint firstAttribute="trailing" secondItem="giu-qm-DiB" secondAttribute="trailing" constant="10" id="jYt-Jy-7R4"/>
+                                                        <constraint firstItem="Rp7-mh-wWe" firstAttribute="leading" secondItem="2YN-DX-Wff" secondAttribute="leading" constant="12" id="lYw-CZ-P9g"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Rp7-mh-wWe" secondAttribute="trailing" constant="12" id="rzm-au-Yau"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="2YN-DX-Wff" secondAttribute="bottom" id="Lhm-hR-pS6"/>
+                                                <constraint firstItem="2YN-DX-Wff" firstAttribute="leading" secondItem="iRs-9J-CGY" secondAttribute="leading" constant="10" id="Lmt-g1-AVk"/>
+                                                <constraint firstAttribute="trailing" secondItem="2YN-DX-Wff" secondAttribute="trailing" constant="10" id="PH6-Iq-FAo"/>
+                                                <constraint firstItem="2YN-DX-Wff" firstAttribute="top" secondItem="iRs-9J-CGY" secondAttribute="top" id="QZe-8v-BX4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tX8-ze-d0J" id="K8Z-I9-SAV"/>
+                                    <outlet property="delegate" destination="tX8-ze-d0J" id="GYH-nb-3EO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gST-BQ-6Y1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ge0-a2-O5L" firstAttribute="bottom" secondItem="gST-BQ-6Y1" secondAttribute="bottom" id="C3p-gV-Gfe"/>
+                            <constraint firstItem="ge0-a2-O5L" firstAttribute="top" secondItem="gST-BQ-6Y1" secondAttribute="top" id="Ecg-Kl-Cho"/>
+                            <constraint firstItem="ge0-a2-O5L" firstAttribute="leading" secondItem="gST-BQ-6Y1" secondAttribute="leading" id="VRQ-3Q-kVS"/>
+                            <constraint firstItem="ge0-a2-O5L" firstAttribute="trailing" secondItem="gST-BQ-6Y1" secondAttribute="trailing" id="qnM-EE-gmv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YEY-v1-A17"/>
+                    <connections>
+                        <outlet property="shopAllTable" destination="ge0-a2-O5L" id="5ne-8v-752"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lAn-I0-IGT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3386.9565217391305" y="-710.49107142857144"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="cXT-o1-ZGS">
+            <objects>
+                <navigationController storyboardIdentifier="LeftMenuNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="1Jg-ov-4U7" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="FoQ-m1-fL7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2ze-Lp-wWC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="menuWidth">
+                            <real key="value" value="0.69999999999999996"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="tX8-ze-d0J" kind="relationship" relationship="rootViewController" id="6aQ-pT-5zH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mpy-ox-B5d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2476.811594202899" y="-710.49107142857144"/>
         </scene>
     </scenes>
     <resources>
