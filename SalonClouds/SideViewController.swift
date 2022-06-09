@@ -8,7 +8,9 @@
 import UIKit
 
 class SideViewController: UIViewController {
-    @IBOutlet var shopAllTable:UITableView!
+    @IBOutlet var sideViewTable:UITableView!
+    var screenNames = ["Shop All", "ShopAll Categories", "My Orders History","Wishlist","Settings"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,13 +31,27 @@ class SideViewController: UIViewController {
 }
 extension SideViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "shopAllCell", for: indexPath) as! shopAllCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "sideViewCell", for: indexPath) as! sideViewCell
+        cell.screenName?.text = self.screenNames[indexPath.row]
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 60
+    }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SideViewFooter")
+        return cell
+    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let storyboard=UIStoryboard(name: "Main", bundle:nil)
+//        let vc = storyboard.instantiateViewController(identifier: "sideViewCell") as? sideViewCell
+////        navigationController?.isNavigationBarHidden=true
+////        self.navigationController?.pushViewController(vc!, animated: true)
+//
+//    }
     
 }

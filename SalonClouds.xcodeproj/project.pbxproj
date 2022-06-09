@@ -26,6 +26,8 @@
 		874D5781283679C100344E81 /* pickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874D5780283679C100344E81 /* pickerView.swift */; };
 		876303FB284A096500667303 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876303FA284A096500667303 /* SideViewController.swift */; };
 		878006C5283CF9C900D0EF5C /* shippingAdress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878006C4283CF9C900D0EF5C /* shippingAdress.swift */; };
+		87B674412850AA4B008CCBDC /* sideViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B674402850AA4B008CCBDC /* sideViewCell.swift */; };
+		87B674432850BDFB008CCBDC /* SideViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B674422850BDFB008CCBDC /* SideViewFooter.swift */; };
 		87CA196E2840A73A00115E9D /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87CA196D2840A73A00115E9D /* Sub.storyboard */; };
 		87CA19702840B6FB00115E9D /* myCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CA196F2840B6FB00115E9D /* myCart.swift */; };
 		87CA19722840B74300115E9D /* myCartTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CA19712840B74300115E9D /* myCartTableCell.swift */; };
@@ -66,6 +68,8 @@
 		874D5780283679C100344E81 /* pickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickerView.swift; sourceTree = "<group>"; };
 		876303FA284A096500667303 /* SideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
 		878006C4283CF9C900D0EF5C /* shippingAdress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shippingAdress.swift; sourceTree = "<group>"; };
+		87B674402850AA4B008CCBDC /* sideViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideViewCell.swift; sourceTree = "<group>"; };
+		87B674422850BDFB008CCBDC /* SideViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideViewFooter.swift; sourceTree = "<group>"; };
 		87CA196D2840A73A00115E9D /* Sub.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sub.storyboard; sourceTree = "<group>"; };
 		87CA196F2840B6FB00115E9D /* myCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCart.swift; sourceTree = "<group>"; };
 		87CA19712840B74300115E9D /* myCartTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCartTableCell.swift; sourceTree = "<group>"; };
@@ -134,11 +138,13 @@
 			children = (
 				87D6E521283B59DD002FECDB /* productDetail.swift */,
 				87D6E523283B5B39002FECDB /* productDetailCell.swift */,
+				87B674422850BDFB008CCBDC /* SideViewFooter.swift */,
 				874D57672836628900344E81 /* AppDelegate.swift */,
 				874D57692836628900344E81 /* SceneDelegate.swift */,
 				874D576B2836628900344E81 /* ViewController.swift */,
 				874D5780283679C100344E81 /* pickerView.swift */,
 				874D576D2836628900344E81 /* Main.storyboard */,
+				87B674402850AA4B008CCBDC /* sideViewCell.swift */,
 				87471A5F28452F9C0058EB33 /* orderDetails.swift */,
 				87471A6128452FF90058EB33 /* orderDetailsCell.swift */,
 				87CA196D2840A73A00115E9D /* Sub.storyboard */,
@@ -292,6 +298,7 @@
 				871B1D2F283E36DC00516A27 /* paymentData.swift in Sources */,
 				874D57682836628900344E81 /* AppDelegate.swift in Sources */,
 				87CA19702840B6FB00115E9D /* myCart.swift in Sources */,
+				87B674432850BDFB008CCBDC /* SideViewFooter.swift in Sources */,
 				87F145DF283FB0F0007F0902 /* wishlistCollectionCell.swift in Sources */,
 				874D576A2836628900344E81 /* SceneDelegate.swift in Sources */,
 				87F145DB283FB091007F0902 /* WishlistTableCell.swift in Sources */,
@@ -311,6 +318,7 @@
 				87DE045D2837548600C139FC /* loginScreen.swift in Sources */,
 				87D6E522283B59DD002FECDB /* productDetail.swift in Sources */,
 				87107C69283E5183008AB8EE /* shopAllCell.swift in Sources */,
+				87B674412850AA4B008CCBDC /* sideViewCell.swift in Sources */,
 				876303FB284A096500667303 /* SideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

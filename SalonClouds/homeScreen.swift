@@ -12,36 +12,27 @@ class homeScreen: UIViewController,YourCellDelegate {
     
     
     @IBOutlet var tableData:UITableView!
-    @IBOutlet var sideMenu :UIImageView!
+  //  @IBOutlet var sideMenu :UIImageView!
     @IBOutlet weak var searchField: UITextField!{
         didSet{
             searchField.tintColor = UIColor.lightGray
             searchField.setIcon(UIImage(imageLiteralResourceName: "search"))
         }
     }
+   // private let sideMenu = SideMenuNavigationController(rootViewController:UIViewController())
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSideMenu()
-        updateMenus()
+//        sideMenu.leftSide = true
+//        SideMenuManager.default.leftMenuNavigationController = sideMenu
+//        SideMenuManager.default.addPanGestureToPresent(toView: view)
+//        setupSideMenu()
+//        updateMenus()
 
-       // let menu = SideMenuNavigationController(rootViewController: shopAll())
-//        let menu = storyboard!.instantiateViewController(withIdentifier: "shopAll") as! shopAll
-//        //menu.leftSide=true
-//       // SideMenuManager.default.leftMenuNavigationController = menu
-//       // SideMenuManager.default.addPanGestureToPresent(toView: view)
-//     present(menu,animated: true,completion: nil)
-        //let menu = storyboard!.instantiateViewController(withIdentifier: "shopAll") as! shopAll
-      
 
-        //present(menu, animated: true, completion: nil)
-
-//        tableData.dataSource = self
-//        tableData.delegate = self
-
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-//        sideMenu.isUserInteractionEnabled = true
-//        sideMenu.addGestureRecognizer(tapGestureRecognizer)
     }
+//    @IBAction func didTapSideMenu (){
+//        present(sideMenu, animated: true)
+//    }
      
     func call(_sender:Any) {
         print("call")
@@ -84,7 +75,7 @@ extension homeScreen : UITableViewDelegate,UITableViewDataSource{
     
 }
 extension homeScreen {
-    
+
     private func setupSideMenu() {
         // Define the menus
         SideMenuManager.default.leftMenuNavigationController = storyboard?.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
@@ -93,7 +84,7 @@ extension homeScreen {
         //SideMenuManager.default.addPanGestureToPresent(toView: navigationController?.navigationBar ?? <#default value#>)
         SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: view)
     }
-    
+
     private func updateMenus() {
         let settings = makeSettings()
         SideMenuManager.default.leftMenuNavigationController?.settings = settings
@@ -136,21 +127,21 @@ extension homeScreen {
 //
 //    }
 }
-extension homeScreen: SideMenuNavigationControllerDelegate {
-    
-    func sideMenuWillAppear(menu: SideMenuNavigationController, animated: Bool) {
-        print("SideMenu Appearing! (animated: \(animated))")
-    }
-    
-    func sideMenuDidAppear(menu: SideMenuNavigationController, animated: Bool) {
-        print("SideMenu Appeared! (animated: \(animated))")
-    }
-    
-    func sideMenuWillDisappear(menu: SideMenuNavigationController, animated: Bool) {
-        print("SideMenu Disappearing! (animated: \(animated))")
-    }
-    
-    func sideMenuDidDisappear(menu: SideMenuNavigationController, animated: Bool) {
-        print("SideMenu Disappeared! (animated: \(animated))")
-    }
-}
+//extension homeScreen: SideMenuNavigationControllerDelegate {
+//
+//    func sideMenuWillAppear(menu: SideMenuNavigationController, animated: Bool) {
+//        print("SideMenu Appearing! (animated: \(animated))")
+//    }
+//
+//    func sideMenuDidAppear(menu: SideMenuNavigationController, animated: Bool) {
+//        print("SideMenu Appeared! (animated: \(animated))")
+//    }
+//
+//    func sideMenuWillDisappear(menu: SideMenuNavigationController, animated: Bool) {
+//        print("SideMenu Disappearing! (animated: \(animated))")
+//    }
+//
+//    func sideMenuDidDisappear(menu: SideMenuNavigationController, animated: Bool) {
+//        print("SideMenu Disappeared! (animated: \(animated))")
+//    }
+//}
