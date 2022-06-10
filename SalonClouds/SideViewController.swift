@@ -10,7 +10,7 @@ import UIKit
 class SideViewController: UIViewController {
     @IBOutlet var sideViewTable:UITableView!
     var screenNames = ["Shop All", "ShopAll Categories", "My Orders History","Wishlist","Settings"]
-
+    var navScreens = ["homeScreen", "shopAll", "ordersList","wishlistScreen","settingScreen"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,12 +46,13 @@ extension SideViewController : UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "SideViewFooter")
         return cell
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let storyboard=UIStoryboard(name: "Main", bundle:nil)
-//        let vc = storyboard.instantiateViewController(identifier: "sideViewCell") as? sideViewCell
-////        navigationController?.isNavigationBarHidden=true
-////        self.navigationController?.pushViewController(vc!, animated: true)
-//
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var screen = navScreens[indexPath.row]
+        let storyboard=UIStoryboard(name: "Main", bundle:nil)
+        let vc = storyboard.instantiateViewController(identifier: navScreens[indexPath.row])
+//        navigationController?.isNavigationBarHidden=true
+        self.navigationController?.pushViewController(vc, animated: true)
+
+    }
     
 }
